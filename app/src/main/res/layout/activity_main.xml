@@ -33,12 +33,15 @@
         android:id="@+id/tvSentence"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Pregunta"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvPoints" />
+        app:layout_constraintTop_toBottomOf="@+id/colorStrip"
+        tools:text="Pregunta" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -46,25 +49,25 @@
         android:layout_width="300dp"
         android:layout_height="17dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:indeterminate="false"
         android:progress="0"
         android:progressTint="#009688"
+        app:layout_constraintBottom_toTopOf="@+id/btNext"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvSentence" />
+        app:layout_constraintTop_toBottomOf="@+id/colorStrip" />
 
     <TextView
         android:id="@+id/tvTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="-160dp"
         android:layout_marginTop="136dp"
-        android:text="Tiempo: "
-        app:layout_constraintStart_toEndOf="@id/tvPoints"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/colorStrip"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tiempo: " />
 
     <TextView
         android:id="@+id/tvPoints"
@@ -72,30 +75,31 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="136dp"
-        android:text="Puntos: "
         app:layout_constraintEnd_toStartOf="@id/tvTimer"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="No"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Puntos: " />
 
     <Button
         android:id="@+id/btYes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="88dp"
         android:text="Sí"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="84dp"
+        android:text="No"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btNext"
@@ -103,10 +107,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="132dp"
         android:text="Omitir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
 
